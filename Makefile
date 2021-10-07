@@ -1,3 +1,6 @@
+install:
+	npm ci
+
 http-start:
 	npm start
 
