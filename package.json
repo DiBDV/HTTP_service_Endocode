@@ -1,9 +1,24 @@
 {
   "dependencies": {
+    "eslint": "^7.32.0",
     "express": "^4.17.1"
   },
   "scripts": {
     "start": "node server.js"
-  }
+  },
+  "name": "http_service_endocode",
+  "version": "1.0.0",
+  "description": "HTTP service for Endocode challenge",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiBDV/HTTP_service_Endocode.git"
+  },
+  "author": "Dmitrii Bedov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DiBDV/HTTP_service_Endocode/issues"
+  },
+  "homepage": "https://github.com/DiBDV/HTTP_service_Endocode#readme"
 }
-
