@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/DiBDV/HTTP_service_Endocode#readme",
   "devDependencies": {
-    "eslint": "^7.32.0"
+    "eslint": "^7.32.0",
+    "supertest": "^6.1.6"
   }
 }
