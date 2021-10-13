@@ -1,4 +1,4 @@
-const request = require('supertest');
+import request, { get } from 'supertest';
 const express = require('express')();
 const app = express();
 const PORT = 8080;
@@ -10,7 +10,7 @@ app.listen(PORT, () => {
 });
 
 request = request('http://localhost:8080');
-request.get('/').expect(200, function(err){
+get('/').expect(200, function(err){
   console.log(err);
 });
 
