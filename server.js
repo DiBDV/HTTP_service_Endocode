@@ -14,6 +14,7 @@ get('/').expect(200, function(err){
   console.log(err);
 });
 
+//Three HTTP endpoints
 app.get('/helloworld', (req, res) => {
   res.send('Hello Stranger');
 });
@@ -24,7 +25,7 @@ request(app)
     .expect(200)
     .end(function(err,res)) {
       if (err) throw err;
-    }
+    };
 
 app.get('/helloworld?name=AlfredENeumann', (req, res) => {
   res.send('Hello Alfred E Neumann');
@@ -33,14 +34,6 @@ app.get('/helloworld?name=AlfredENeumann', (req, res) => {
 app.get('/versionz', (req, res) => {
   res.status(200).send({
     gitHash: 'git rev-parse --show-object-format[=(storage|input|output)]:',
-    gitProjectName: ''
+    gitProjectName: 'https://github.com/DiBDV/HTTP_service_Endocode'
   });
 });
-
-
-
-// // Listen to the App Engine-specified port, or 8080 otherwise
-// const PORT = process.env.PORT || 8080; 
-// app.listen(PORT, () => {
-//   console.log(`Server listening on port ${PORT}...`);
-// });
