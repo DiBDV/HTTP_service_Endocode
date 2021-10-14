@@ -1,13 +1,17 @@
 # Dockerfile
 
-FROM node:16.10
+FROM node:lts-alpine
 
-WORKDIR /usr/src
+WORKDIR /usr/src/app
+
+COPY .eslintrc.yml /root/.eslintrc.yml
+COPY package.json ./
+COPY Makefile ./
+
 
 RUN npm install -g eslint babel-eslint
 RUN npm install -g eslint-config-airbnb-base eslint-plugin-import
 
-COPY eslintrc.yml /root/.eslintrc.yml
+COPY server.js server.js
 
 CMD ["eslint", "/app"]
-

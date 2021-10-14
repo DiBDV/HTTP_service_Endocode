@@ -1,18 +1,18 @@
-import request, { get } from 'supertest';
-const express = require('express')();
+const request = require('supertest');
+const express = require('express');
 const app = express();
 const PORT = 8080;
 
-app.use (express.json())
+app.use (express.json());
 
 app.listen(PORT, () => {
   console.log(`it's alive on http://localhost:${PORT}`);
 });
 
-request = request('http://localhost:8080');
-get('/').expect(200, function(err){
-  console.log(err);
-});
+// request = request('http://localhost:8080');
+// app.get('/').expect(200, function(err){
+//   console.log(err);
+// });
 
 //Three HTTP endpoints
 app.get('/helloworld', (req, res) => {
@@ -20,12 +20,12 @@ app.get('/helloworld', (req, res) => {
 });
 
 request(app)
-    .app('/helloworld')
+    .get('/helloworld')
     .expect('Content-Length', '14')
     .expect(200)
-    .end(function(err,res)) {
+    .end(function(err,res) {
       if (err) throw err;
-    };
+    });
 
 app.get('/helloworld?name=AlfredENeumann', (req, res) => {
   res.send('Hello Alfred E Neumann');
