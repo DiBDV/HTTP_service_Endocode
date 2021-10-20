@@ -14,4 +14,4 @@ RUN npm install -g eslint-config-airbnb-base eslint-plugin-import
 
 COPY server.js server.js
 
-CMD ["eslint", "/app"]
+CMD ["eslint", "/usr/src/app"]
