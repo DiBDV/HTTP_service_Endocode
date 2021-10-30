@@ -1,6 +1,6 @@
 ## HTTP service for Endocode challenge
 
-This repository is used to got throught some challenge steps. General idea is to create a HTTP service, that will have three endpoints:
+This repository is used to go throught some challenge steps. General idea is to create a HTTP service, that will have three endpoints:
 
 ```
 * /helloworld
